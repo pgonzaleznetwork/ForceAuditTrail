@@ -8,7 +8,7 @@ export interface Attributes {
     Username: string;
   }
   
-  export interface SetupAuditTrailEntry {
+  export interface SetupAuditTrailRecord {
     attributes: Attributes;
     Id: string;
     CreatedBy: CreatedBy;
