@@ -1,21 +1,29 @@
 {
-    "compilerOptions": {
-      "target": "es2017",
-      "types": ["node", "jest"],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "baseUrl": ".",
-      "noFallthroughCasesInSwitch": true,
-      "outDir": "./dist"
-    },
-    "compileOnSave": true,
-    "include": ["."]
-  }
+  "compilerOptions": {
+    "target": "es2017",
+    "types": ["node", "jest"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true
+  },
+  "compileOnSave": true,
+  "include": ["src/**/*", "."],
+  "exclude": ["node_modules", "dist"]
+}

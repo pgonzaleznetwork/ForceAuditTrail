@@ -8,6 +8,7 @@ function parseSetupAuditTrail(entry: SetupAuditTrailEntry): void {
   console.log(`Display: ${entry.Display}`);
   console.log(`Created Date: ${entry.CreatedDate}`);
   console.log(`Created By: ${entry.CreatedBy.Username}`);
+  //let something: boolean = entry.Action;
 }
 
 // Example usage
@@ -24,7 +25,8 @@ const exampleEntry: SetupAuditTrailEntry = {
     },
     "Username": "pgonzaleznetwork@brave-raccoon-mm7crl.com"
   },
-
+  "CreatedDate": "2024-06-27T09:43:53.000+0000",
+  "Action": "createdCFFormula",
   "Display": "Created custom formula field: MyNewField (Checkbox)"
 };
 
