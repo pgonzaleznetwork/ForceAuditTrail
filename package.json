@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "description": "Makes the Salesforce SetupAuditTrail useful.",
   "type": "module",
-  "main": "src/index.js",
+  "main": "dist/src/index.js",
   "scripts": {
-    "test": "jest"
+    "start": "node src/index.js",
+    "dev": " parallelshell 'tsc -w' 'npm run watch' ",
+    "build": "tsc",
+    "test": "jest dist --silent=false",
+    "watch": "jest dist --silent=false --verbose --detectOpenHandles --coverage --watchAll",
+    "test:coverage": "jest --silent=false --verbose --detectOpenHandles --coverage && jest-coverage-badges"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +20,9 @@
   "devDependencies": {
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
-    "babel-jest": "^29.7.0"
+    "babel-jest": "^29.7.0",
+    "@types/jest": "^29.2.6",
+    "parallelshell": "^3.0.2",
+    "ts-jest": "^29.0.5"
   }
 }
