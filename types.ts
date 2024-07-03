@@ -31,6 +31,7 @@ export enum ChangeCategory {
   SECURITY = 'SECURITY',
   DATA_INTEGRITY = 'DATA_INTEGRITY',
   DATABASE_CONFIGURATION = 'DATABASE_CONFIGURATION',
+  SECURITY_PASSWORDS = 'SECURITY_PASSWORDS',
   UNKNOWN = 'UNKNOWN'
 }
 
@@ -40,6 +41,7 @@ export enum MetadataType{
   ProfileSessionSetting = 'ProfileSessionSetting',
   CustomField = 'CustomField',
   Layout = 'Layout',
+  ProfilePasswordPolicy = 'ProfilePasswordPolicy',
   Unknown = 'Unknown'
 }
 
