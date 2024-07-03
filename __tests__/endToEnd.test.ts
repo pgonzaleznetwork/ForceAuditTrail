@@ -2,6 +2,7 @@ import { parseAuditTrailRecord } from "../src";
 import { ChangeCategory, OperationType, MetadataType } from "../types";
 import { newValidation, changedValidationMessage, removedValidation } from "./mockData/ValidationRule";
 import { profilePermChangedCustom, profileOlpChangedCustom , SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom } from "./mockData/Profile";
+import { sessiontimeoutForProfile } from "./mockData/ProfileSessionSetting";
 
 describe('ValidationRule Tests', () => {
 
@@ -58,4 +59,15 @@ describe('Profile Tests', () => {
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 
+
+});
+
+describe('ProfileSessionSetting Tests', () => {
+    test('Changed profile session setting action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(sessiontimeoutForProfile);
+        //expect(result.metadataType).toBe(MetadataType.ProfileSessionSetting);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('sessionTimeout');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
 });
