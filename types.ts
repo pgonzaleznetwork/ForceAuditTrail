@@ -20,14 +20,16 @@ export interface SetupAuditTrailRecord {
 export enum OperationType {
   CREATED = 'CREATED',
   MODIFIED = 'MODIFIED',
-  DELETED = 'DELETED'
+  DELETED = 'DELETED',
+  UNKNOWN = 'UNKNOWN'
 }
 
 export enum MetadataType{
   ValidationRule = 'ValidationRule',
   Profile = 'Profile',
   CustomField = 'CustomField',
-  Layout = 'Layout'
+  Layout = 'Layout',
+  Unknown = 'Unknown'
 }
 
 export interface ParseResult {
@@ -35,4 +37,5 @@ export interface ParseResult {
   metadataType: MetadataType;
   fieldModified: string | null;
   sampleDisplay: string | null;
+  setupAuditTrailRecord?: SetupAuditTrailRecord;
 }

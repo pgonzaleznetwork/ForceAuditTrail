@@ -1,19 +1,26 @@
 import { SetupAuditTrailRecord } from '../types'
-import { parseResultsbyMetadataType } from 'lib/MetadataTypeParsing/allMetadataParsing';
+import { parseResultsbyMetadataType } from '../lib/MetadataTypeParsing/allMetadataParsing';
 import { ParseResult } from '../types';
+import { OperationType } from '../types';
+import { MetadataType } from '../types';
 
-export function parseAuditTrailRecord(entry: SetupAuditTrailRecord){
+export function parseAuditTrailRecord(entry: SetupAuditTrailRecord) : ParseResult{
 
     //to avoid modifying the original object
     const clonedRecord: SetupAuditTrailRecord = JSON.parse(JSON.stringify(entry));
+    
+    const parseResult = parseResultsbyMetadataType.get(clonedRecord.Action);
 
-    if(parseResultsbyMetadataType.has(clonedRecord.Action)) {
-        const parseResult = parseResultsbyMetadataType.get(clonedRecord.Action);
-        console.log(parseResult);
+    if(parseResult){
+        parseResult.setupAuditTrailRecord = clonedRecord;
+        return parseResult;
     }
 
-    //return clonedRecord;
-  
- 
-
+    return {
+        operationType: OperationType.UNKNOWN,
+        metadataType: MetadataType.Unknown,
+        fieldModified: null,
+        sampleDisplay: null,
+        setupAuditTrailRecord: clonedRecord
+    };  
 }
