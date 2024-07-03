@@ -37,6 +37,7 @@ export enum ChangeCategory {
 export enum MetadataType{
   ValidationRule = 'ValidationRule',
   Profile = 'Profile',
+  ProfileSessionSetting = 'ProfileSessionSetting',
   CustomField = 'CustomField',
   Layout = 'Layout',
   Unknown = 'Unknown'

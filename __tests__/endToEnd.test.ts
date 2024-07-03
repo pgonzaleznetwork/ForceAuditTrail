@@ -1,6 +1,7 @@
 import { parseAuditTrailRecord } from "../src";
 import { ChangeCategory, OperationType, MetadataType } from "../types";
 import { newValidation, changedValidationMessage, removedValidation } from "./mockData/ValidationRule";
+import { profilePermChangedCustom, profileOlpChangedCustom , SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom } from "./mockData/Profile";
 
 describe('ValidationRule Tests', () => {
 
@@ -25,6 +26,36 @@ describe('ValidationRule Tests', () => {
         expect(result.operationType).toBe(OperationType.DELETED);
         expect(result.fieldModified).toBe(null);
         expect(result.changeCategory).toBe(ChangeCategory.DATA_INTEGRITY);
+    });
+
+});
+
+describe('Profile Tests', () => {
+
+    test('Changed profile permission action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profilePermChangedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('userPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
+
+    test('Changed profile object permission action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileOlpChangedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('objectPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+   
+
+    test('Changed profile connected application action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe(null);
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 
 });
