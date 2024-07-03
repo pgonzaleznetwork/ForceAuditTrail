@@ -1,5 +1,5 @@
-import { parseAuditTrailRecord } from "../../src";
-import { newValidationRule } from "../../lib/mockTrailEntries/ValidationRule/newValidation";
+import { parseAuditTrailRecord } from "../src";
+import { newValidationRule } from "./mockData/ValidationRule";
 
 describe('SetupAuditTrail', () => {
     test('New validation rule action is parsed correctly', () => {
