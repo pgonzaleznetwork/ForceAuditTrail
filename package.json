@@ -5,7 +5,7 @@
   "type": "module",
   "main": "dist/src/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf dist && tsc",
     "test": "jest dist --silent=false --verbose --detectOpenHandles --coverage",
     "dev": "run-s build test",
     "watch": "run-p watch:build watch:test",

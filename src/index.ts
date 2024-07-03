@@ -1,13 +1,19 @@
-import {getMetadataType} from '../lib/metadataTypesByActions';
 import { SetupAuditTrailRecord } from '../types'
+import { parseResultsbyMetadataType } from 'lib/MetadataTypeParsing/allMetadataParsing';
+import { ParseResult } from '../types';
 
-export function addExtraProps(entry: SetupAuditTrailRecord){
+export function parseAuditTrailRecord(entry: SetupAuditTrailRecord){
 
-    const deepCloneEntry = JSON.parse(JSON.stringify(entry));
+    //to avoid modifying the original object
+    const clonedRecord: SetupAuditTrailRecord = JSON.parse(JSON.stringify(entry));
 
-    const { Action } = deepCloneEntry;
+    if(parseResultsbyMetadataType.has(clonedRecord.Action)) {
+        const parseResult = parseResultsbyMetadataType.get(clonedRecord.Action);
+        console.log(parseResult);
+    }
+
+    //return clonedRecord;
   
-    deepCloneEntry.metadataType = getMetadataType(Action);
-    return deepCloneEntry;
+ 
 
 }
