@@ -1,4 +1,4 @@
-import { SetupAuditTrailRecord } from '../types'
+import { ChangeCategory, SetupAuditTrailRecord } from '../types'
 import { parseResultsbyMetadataType } from '../lib/MetadataTypeParsing/allMetadataParsing';
 import { ParseResult } from '../types';
 import { OperationType } from '../types';
@@ -21,6 +21,7 @@ export function parseAuditTrailRecord(entry: SetupAuditTrailRecord) : ParseResul
         metadataType: MetadataType.Unknown,
         fieldModified: null,
         sampleDisplay: null,
-        setupAuditTrailRecord: clonedRecord
+        setupAuditTrailRecord: clonedRecord,
+        changeCategory: ChangeCategory.UNKNOWN
     };  
 }

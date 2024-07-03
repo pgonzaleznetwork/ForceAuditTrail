@@ -24,6 +24,16 @@ export enum OperationType {
   UNKNOWN = 'UNKNOWN'
 }
 
+export enum ChangeCategory {
+  COSMETIC = 'COSMETIC',  
+  BUSINESS_LOGIC_DECLARATIVE = 'BUSINESS_LOGIC_DECLARATIVE',
+  BUSINESS_LOGIC_CODE = 'BUSINESS_LOGIC_CODE',
+  SECURITY = 'SECURITY',
+  DATA_INTEGRITY = 'DATA_INTEGRITY',
+  DATABASE_CONFIGURATION = 'DATABASE_CONFIGURATION',
+  UNKNOWN = 'UNKNOWN'
+}
+
 export enum MetadataType{
   ValidationRule = 'ValidationRule',
   Profile = 'Profile',
@@ -38,4 +48,5 @@ export interface ParseResult {
   fieldModified: string | null;
   sampleDisplay: string | null;
   setupAuditTrailRecord?: SetupAuditTrailRecord;
+  changeCategory: ChangeCategory;
 }

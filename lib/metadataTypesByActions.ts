@@ -3,7 +3,7 @@ import {ParseResult} from '../types';
 import {OperationType} from '../types';
 import {MetadataType} from '../types';
 
-const parseResultsByValidationRuleActions = new Map<string, ParseResult>();
+/*const parseResultsByValidationRuleActions = new Map<string, ParseResult>();
 
 parseResultsByValidationRuleActions.set('newValidation', {
     metadataType: MetadataType.ValidationRule,

@@ -1,4 +1,5 @@
 import { parseAuditTrailRecord } from "../src";
+import { ChangeCategory } from "../types";
 import { newValidation, changedValidationMessage, removedValidation } from "./mockData/ValidationRule";
 
 describe('ValidationRule Tests', () => {
@@ -15,6 +16,7 @@ describe('ValidationRule Tests', () => {
         expect(result.metadataType).toBe('ValidationRule');
         expect(result.operationType).toBe('MODIFIED');
         expect(result.fieldModified).toBe('errorMessage');
+        expect(result.changeCategory).toBe(ChangeCategory.COSMETIC);
     });
 
     test('Removed validation rule action is parsed correctly', () => {
@@ -22,6 +24,7 @@ describe('ValidationRule Tests', () => {
         expect(result.metadataType).toBe('ValidationRule');
         expect(result.operationType).toBe('DELETED');
         expect(result.fieldModified).toBe(null);
+        expect(result.changeCategory).toBe(ChangeCategory.DATA_INTEGRITY);
     });
 
 });
