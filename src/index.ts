@@ -9,7 +9,7 @@ export function parseAuditTrailRecord(entry: SetupAuditTrailRecord) : ParseResul
     //to avoid modifying the original object
     const clonedRecord: SetupAuditTrailRecord = JSON.parse(JSON.stringify(entry));
     
-    const parseResult = parseResultsbyMetadataType.get(clonedRecord.Action);
+    const parseResult = parseResultsbyMetadataType[clonedRecord.Action];
     console.log(parseResult);
 
     if(parseResult){
