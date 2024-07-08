@@ -6,7 +6,7 @@ import { MetadataType } from '../types';
 
 export function parseAuditTrailRecord(entry: SetupAuditTrailRecord) : ParseResult{
 
-    //to avoid modifying the original object
+    //to avoid modifying the original object TODO: use structure clone method
     const clonedRecord: SetupAuditTrailRecord = JSON.parse(JSON.stringify(entry));
     
     const parseResult = parseResultsbyMetadataType[clonedRecord.Action];

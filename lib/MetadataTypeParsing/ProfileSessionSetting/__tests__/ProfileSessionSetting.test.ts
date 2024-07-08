@@ -1,12 +1,6 @@
-import { parseAuditTrailRecord } from "../src";
-import { ChangeCategory, OperationType, MetadataType } from "../types";
-import { sessiontimeoutForProfile } from "./mockData/ProfileSessionSetting";
-
-
-
-
-
-
+import { ChangeCategory, OperationType, MetadataType } from "../../../../types";
+import {parseAuditTrailRecord } from "../../../../src/index";
+import {sessiontimeoutForProfile} from "../__tests__/mocks/ProfileSessionSettingMock";
 
 describe('ProfileSessionSetting Tests', () => {
     test('Changed profile session setting action is parsed correctly', () => {
@@ -17,8 +11,3 @@ describe('ProfileSessionSetting Tests', () => {
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });
-
-
-
-
-
