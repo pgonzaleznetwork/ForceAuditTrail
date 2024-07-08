@@ -3,7 +3,8 @@ import {parseAuditTrailRecord } from "../../../../src/index";
 import {profileFlsChangedCustom, 
     profileFlsChangedStandard, 
     profileOlpChangedCustom, profilePermChangedCustom, 
-    SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom
+    SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom,
+    profileLoginHoursChangedCustom, profileLoginHoursChangedStandard
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -51,6 +52,24 @@ describe('Profile:Field Level Security Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('fieldPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+describe('Profile:Login hours Tests', () => {
+    test('profileLoginHoursChangedCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileLoginHoursChangedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('loginHours');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
+    test('profileFlsChangedStandard action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileLoginHoursChangedStandard);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('loginHours');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

@@ -73,5 +73,19 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     fieldModified: 'fieldPermissions',
     sampleDisplay: "Changed profile Authenticated Website: field-level security for Account: Number of Locations was changed from Read/Write to No Access",
     changeCategory: ChangeCategory.SECURITY
+  },
+  profileLoginHoursChangedStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'loginHours',
+    sampleDisplay: "Changed profile Standard Platform User: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
+    changeCategory: ChangeCategory.SECURITY
+  },
+  profileLoginHoursChangedCustom: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'loginHours',
+    sampleDisplay: "Changed profile Custom: Marketing Profile: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
+    changeCategory: ChangeCategory.SECURITY
   }
 };

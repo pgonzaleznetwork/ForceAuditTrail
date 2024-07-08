@@ -90,3 +90,40 @@ export const profileFlsChangedStandard = {
     "Section": "Manage Users"
 };
 
+export const profileLoginHoursChangedStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002U7ZEKA0"
+    },
+    "Id": "0YmWy000002U7ZEKA0",
+    "CreatedDate": "2024-07-03T13:12:59.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileLoginHoursChangedStandard",
+    "Display": "Changed profile Standard Platform User: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
+    "Section": "Manage Users"
+};
+
+export const profileLoginHoursChangedCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002U4gBKAS"
+    },
+    "Id": "0YmWy000002U4gBKAS",
+    "CreatedDate": "2024-07-03T13:12:59.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileLoginHoursChangedCustom",
+    "Display": "Changed profile Custom: Marketing Profile: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
+    "Section": "Manage Users"
+};
