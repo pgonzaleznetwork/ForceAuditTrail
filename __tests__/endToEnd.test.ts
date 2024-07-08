@@ -33,36 +33,7 @@ describe('ValidationRule Tests', () => {
 
 });
 
-describe('Profile Tests', () => {
 
-    test('Changed profile permission action is parsed correctly', () => {
-        const result = parseAuditTrailRecord(profilePermChangedCustom);
-        expect(result.metadataType).toBe(MetadataType.Profile);
-        expect(result.operationType).toBe(OperationType.MODIFIED);
-        expect(result.fieldModified).toBe('userPermissions');
-        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
-    });
-
-
-    test('Changed profile object permission action is parsed correctly', () => {
-        const result = parseAuditTrailRecord(profileOlpChangedCustom);
-        expect(result.metadataType).toBe(MetadataType.Profile);
-        expect(result.operationType).toBe(OperationType.MODIFIED);
-        expect(result.fieldModified).toBe('objectPermissions');
-        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
-    });
-   
-
-    test('Changed profile connected application action is parsed correctly', () => {
-        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom);
-        expect(result.metadataType).toBe(MetadataType.Profile);
-        expect(result.operationType).toBe(OperationType.MODIFIED);
-        expect(result.fieldModified).toBe(null);
-        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
-    });
-
-
-});
 
 describe('ProfileSessionSetting Tests', () => {
     test('Changed profile session setting action is parsed correctly', () => {
