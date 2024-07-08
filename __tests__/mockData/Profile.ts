@@ -51,3 +51,42 @@ export const SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom =
         "Username": "pgonzaleznetwork@brave-raccoon-mm7crl.com"
     }
 };
+
+export const profileFlsChangedCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002U4gAKAS"
+    },
+    "Id": "0YmWy000002U4gAKAS",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileFlsChangedCustom",
+    "Display": "Changed profile Custom: Sales Profile: field-level security for Broker: Mobile Phone was changed from No Access to Read Only",
+    "Section": "Manage Users",
+    "CreatedDate": "2024-07-03T13:12:59.000+0000"
+};
+
+export const profileFlsChangedStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002U06KKAS"
+    },
+    "Id": "0YmWy000002U06KKAS",
+    "CreatedDate": "2024-07-03T13:12:59.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileFlsChangedStandard",
+    "Display": "Changed profile Authenticated Website: field-level security for Account: Number of Locations was changed from Read/Write to No Access",
+    "Section": "Manage Users"
+};
+

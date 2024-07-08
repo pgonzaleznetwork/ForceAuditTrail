@@ -4,6 +4,7 @@ import { newValidation, changedValidationMessage, removedValidation } from "./mo
 import { profilePermChangedCustom, profileOlpChangedCustom , SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom } from "./mockData/Profile";
 import { sessiontimeoutForProfile } from "./mockData/ProfileSessionSetting";
 import { minimumPasswordLifetimeEnableForProfile, obscureSecretAnswerEnableForProfile } from "./mockData/ProfilePasswordPolicy";
+import { profileFlsChangedCustom , profileFlsChangedStandard} from "./mockData/Profile";
 
 describe('ValidationRule Tests', () => {
 
@@ -88,5 +89,24 @@ describe('ProfilePasswordPolicy Tests', () => {
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('obscure');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY_PASSWORDS);
+    });
+});
+
+
+describe('Profile:Field Level Security Tests', () => {
+    test('profileFlsChangedCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileFlsChangedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('fieldPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
+    test('profileFlsChangedStandard action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileFlsChangedStandard);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('fieldPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

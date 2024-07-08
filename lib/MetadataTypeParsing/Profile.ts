@@ -59,5 +59,19 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     fieldModified: null,
     sampleDisplay: 'Changed profile Sales Development Manager: Force.com IDE connected app is disabled',
     changeCategory: ChangeCategory.SECURITY
+  },
+  profileFlsChangedCustom: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'fieldPermissions',
+    sampleDisplay: "Changed profile Custom: Sales Profile: field-level security for Broker: Mobile Phone was changed from No Access to Read Only",
+    changeCategory: ChangeCategory.SECURITY
+  },
+  profileFlsChangedStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'fieldPermissions',
+    sampleDisplay: "Changed profile Authenticated Website: field-level security for Account: Number of Locations was changed from Read/Write to No Access",
+    changeCategory: ChangeCategory.SECURITY
   }
 };
