@@ -1,5 +1,5 @@
 import { parseResultsByValidationRuleActions } from "./ValidationRule";
-import { parseResultsByProfileActions } from "./Profile";
+import { parseResultsByProfileActions } from "./Profile/Profile";
 import { parseResultsByProfileSessionSettingActions } from "./ProfileSessionSetting";
 import { parseResultsByProfilePasswordPolicyActions } from "./ProfilePasswordPolicy";
 import { ParseResult } from '../../types';
