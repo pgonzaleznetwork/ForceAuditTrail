@@ -1,7 +1,7 @@
-import { ParseResult } from '../../types';
-import { OperationType } from '../../types';
-import { MetadataType } from '../../types';
-import { ChangeCategory } from '../../types';
+import { ParseResult } from '../../../types';
+import { OperationType } from '../../../types';
+import { MetadataType } from '../../../types';
+import { ChangeCategory } from '../../../types';
 
 export const parseResultsByValidationRuleActions: Record<string, ParseResult> = {
   newValidation: {

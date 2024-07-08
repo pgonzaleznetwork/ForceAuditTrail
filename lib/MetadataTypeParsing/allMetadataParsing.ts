@@ -1,4 +1,4 @@
-import { parseResultsByValidationRuleActions } from "./ValidationRule";
+import { parseResultsByValidationRuleActions } from "./ValidationRule/ValidationRule";
 import { parseResultsByProfileActions } from "./Profile/Profile";
 import { parseResultsByProfileSessionSettingActions } from "./ProfileSessionSetting";
 import { parseResultsByProfilePasswordPolicyActions } from "./ProfilePasswordPolicy/ProfilePasswordPolicy";
