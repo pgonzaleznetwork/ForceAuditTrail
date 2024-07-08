@@ -1,10 +1,9 @@
 import { parseAuditTrailRecord } from "../src";
 import { ChangeCategory, OperationType, MetadataType } from "../types";
 import { newValidation, changedValidationMessage, removedValidation } from "./mockData/ValidationRule";
-import { profilePermChangedCustom, profileOlpChangedCustom , SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom } from "./mockData/Profile";
 import { sessiontimeoutForProfile } from "./mockData/ProfileSessionSetting";
 import { minimumPasswordLifetimeEnableForProfile, obscureSecretAnswerEnableForProfile } from "./mockData/ProfilePasswordPolicy";
-import { profileFlsChangedCustom , profileFlsChangedStandard} from "./mockData/Profile";
+
 
 describe('ValidationRule Tests', () => {
 
