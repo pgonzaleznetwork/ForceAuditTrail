@@ -129,5 +129,33 @@ SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom: {
     fieldModified: 'classAccesses',
     sampleDisplay: "Changed profile Custom: Support Profile: ApexTypesController Apex class access was enabled",
     changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexPage_DisabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'pageAccesses',
+  sampleDisplay: "Changed profile Standard Platform User: ChangePassword pageAccesses was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'pageAccesses',
+  sampleDisplay: "Changed profile Custom: Support Profile: CommunitiesSelfRegConfirm pageAccesses was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexPage_EnabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'pageAccesses',
+  sampleDisplay: "Changed profile Custom: Support Profile: CommunitiesSelfRegConfirm pageAccesses was enabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexPage_EnabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'pageAccesses',
+  sampleDisplay: "Changed profile Standard Platform User: ChangePassword pageAccesses was enabled",
+  changeCategory: ChangeCategory.SECURITY
 }
 };

@@ -6,7 +6,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom,
     profileLoginHoursChangedCustom, profileLoginHoursChangedStandard,
     deletedLoginIpRange_withProfile,loginIpRange,
-    SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom
+    SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom,
+    SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -100,6 +101,17 @@ describe('Profile:Apex Class Access Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('classAccesses');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
+});
+
+describe('Profile:Visualforce Page Access Tests', () => {
+    test('SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('pageAccesses');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 
