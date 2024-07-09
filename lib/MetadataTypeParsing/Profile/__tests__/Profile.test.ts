@@ -4,7 +4,8 @@ import {profileFlsChangedCustom,
     profileFlsChangedStandard, 
     profileOlpChangedCustom, profilePermChangedCustom, 
     SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom,
-    profileLoginHoursChangedCustom, profileLoginHoursChangedStandard
+    profileLoginHoursChangedCustom, profileLoginHoursChangedStandard,
+    deletedLoginIpRange_withProfile,loginIpRange
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -70,6 +71,24 @@ describe('Profile:Login hours Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('loginHours');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+describe('Profile:Login IP Ranges Tests', () => {
+    test('deletedLoginIpRange_withProfile action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(deletedLoginIpRange_withProfile);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.DELETED);
+        expect(result.fieldModified).toBe('loginIpRanges');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
+    test('loginIpRange action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(loginIpRange);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.CREATED);
+        expect(result.fieldModified).toBe('loginIpRanges');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

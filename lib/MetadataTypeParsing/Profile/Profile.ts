@@ -87,5 +87,19 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     fieldModified: 'loginHours',
     sampleDisplay: "Changed profile Custom: Marketing Profile: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
     changeCategory: ChangeCategory.SECURITY
-  }
+  },
+  deletedLoginIpRange_withProfile: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.DELETED,
+    fieldModified: 'loginIpRanges',
+    sampleDisplay: "Deleted Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
+    changeCategory: ChangeCategory.SECURITY
+},
+loginIpRange: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.CREATED,
+    fieldModified: 'loginIpRanges',
+    sampleDisplay: "Added Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
+    changeCategory: ChangeCategory.SECURITY
+}
 };

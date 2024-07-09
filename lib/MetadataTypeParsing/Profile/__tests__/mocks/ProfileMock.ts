@@ -127,3 +127,41 @@ export const profileLoginHoursChangedCustom = {
     "Display": "Changed profile Custom: Marketing Profile: login hours were changed from Sunday All Day to Sunday 12:00 AM - 1:00 AM",
     "Section": "Manage Users"
 };
+
+export const deletedLoginIpRange_withProfile = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002UtynKAC"
+    },
+    "Id": "0YmWy000002UtynKAC",
+    "CreatedDate": "2024-07-09T13:07:09.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "deletedLoginIpRange_withProfile",
+    "Display": "Deleted Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
+    "Section": null
+};
+
+export const loginIpRange = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002UtxBKAS"
+    },
+    "Id": "0YmWy000002UtxBKAS",
+    "CreatedDate": "2024-07-09T13:07:02.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "loginIpRange",
+    "Display": "Added Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
+    "Section": "Manage Users"
+};
