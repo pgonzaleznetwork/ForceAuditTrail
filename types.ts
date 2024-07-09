@@ -32,6 +32,7 @@ export enum ChangeCategory {
   DATA_INTEGRITY = 'DATA_INTEGRITY',
   DATABASE_CONFIGURATION = 'DATABASE_CONFIGURATION',
   SECURITY_PASSWORDS = 'SECURITY_PASSWORDS',
+  INTEGRATION = 'INTEGRATION',
   UNKNOWN = 'UNKNOWN'
 }
 
@@ -42,6 +43,7 @@ export enum MetadataType{
   CustomField = 'CustomField',
   Layout = 'Layout',
   ProfilePasswordPolicy = 'ProfilePasswordPolicy',
+  ExternalCredential = 'ExternalCredential',
   Unknown = 'Unknown'
 }
 
