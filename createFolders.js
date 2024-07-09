@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
 
 // Get the current file path and directory
 const __filename = fileURLToPath(import.meta.url);
@@ -19,14 +19,13 @@ if (!metadataType) {
 // Define the base directory
 const baseDir = path.join(__dirname, 'lib', 'metadataTypeParsing', metadataType);
 
-// Define the structure
-const structure = [
+const structure =  [
     '',
     '__tests__',
-    'mocks',
+    join('__tests__', 'mocks'),
     `${metadataType}.ts`,
-    path.join('__tests__', `${metadataType}.test.ts`),
-    path.join('mocks', `${metadataType}Mock.ts`)
+    join('__tests__', `${metadataType}.test.ts`),
+    join('__tests__', 'mocks', `${metadataType}Mock.ts`)
 ];
 
 // Create the folders and files
