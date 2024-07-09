@@ -101,5 +101,33 @@ loginIpRange: {
     fieldModified: 'loginIpRanges',
     sampleDisplay: "Added Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
     changeCategory: ChangeCategory.SECURITY
+  },
+  SetupEntityAccessAudit_Profile_ApexClass_DisabledStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'classAccesses',
+    sampleDisplay: "Changed profile Standard Platform User: AmossTest_InterfaceToDouble Apex class access was disabled",
+    changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexClass_EnabledStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'classAccesses',
+    sampleDisplay: "Changed profile Standard Platform User: AmossTest_InterfaceToDouble Apex class access was enabled",
+    changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexClass_DisabledCustom: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'classAccesses',
+    sampleDisplay: "Changed profile Custom: Support Profile: Bakery Apex class access was disabled",
+    changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'classAccesses',
+    sampleDisplay: "Changed profile Custom: Support Profile: ApexTypesController Apex class access was enabled",
+    changeCategory: ChangeCategory.SECURITY
 }
 };

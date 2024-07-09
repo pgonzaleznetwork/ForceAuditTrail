@@ -5,7 +5,8 @@ import {profileFlsChangedCustom,
     profileOlpChangedCustom, profilePermChangedCustom, 
     SetupEntityAccessAudit_Profile_ConnectedApplication_EnabledCustom,
     profileLoginHoursChangedCustom, profileLoginHoursChangedStandard,
-    deletedLoginIpRange_withProfile,loginIpRange
+    deletedLoginIpRange_withProfile,loginIpRange,
+    SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -91,4 +92,15 @@ describe('Profile:Login IP Ranges Tests', () => {
         expect(result.fieldModified).toBe('loginIpRanges');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
+});
+
+describe('Profile:Apex Class Access Tests', () => {
+    test('SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('classAccesses');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+
 });
