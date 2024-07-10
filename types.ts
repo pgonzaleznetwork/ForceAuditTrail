@@ -41,6 +41,7 @@ export enum MetadataType{
   Profile = 'Profile',
   ProfileSessionSetting = 'ProfileSessionSetting',
   CustomField = 'CustomField',
+  ApexClass = 'ApexClass',
   Layout = 'Layout',
   ProfilePasswordPolicy = 'ProfilePasswordPolicy',
   ExternalCredential = 'ExternalCredential',

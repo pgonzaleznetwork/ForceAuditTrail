@@ -3,6 +3,7 @@ import { parseResultsByProfileActions } from "./Profile/Profile";
 import { parseResultsByProfileSessionSettingActions } from "./ProfileSessionSetting/ProfileSessionSetting";
 import { parseResultsByProfilePasswordPolicyActions } from "./ProfilePasswordPolicy/ProfilePasswordPolicy";
 import { parseResultsByExternalCredentialActions } from "./ExternalCredential/ExternalCredential";
+import {parseResultsByApexClassActions} from "./ApexClass/ApexClass";
 import { ParseResult } from '../../types';
 
 
@@ -11,5 +12,6 @@ export const parseResultsbyMetadataType: Record<string, ParseResult> = {
   ...parseResultsByProfileActions,
   ...parseResultsByProfileSessionSettingActions,
   ...parseResultsByProfilePasswordPolicyActions,
-  ...parseResultsByExternalCredentialActions
+  ...parseResultsByExternalCredentialActions,
+  ...parseResultsByApexClassActions
 };
