@@ -317,3 +317,79 @@ export const SetupEntityAccessAudit_Profile_ApexPage_EnabledStandard = {
     "Display": "Changed profile Standard Platform User: ChangePassword Visualforce page access was enabled",
     "Section": "Manage Users"
 };
+
+export const SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002VOOIKA4"
+    },
+    "Id": "0YmWy000002VOOIKA4",
+    "CreatedDate": "2024-07-10T08:36:51.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledStandard",
+    "Display": "Changed profile Standard Platform User: Feature Flag Custom Metadata Type was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002VLS4KAO"
+    },
+    "Id": "0YmWy000002VLS4KAO",
+    "CreatedDate": "2024-07-10T08:36:37.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledCustom",
+    "Display": "Changed profile Custom: Support Profile: DML Finalizer Custom Metadata Type was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002VKxPKAW"
+    },
+    "Id": "0YmWy000002VKxPKAW",
+    "CreatedDate": "2024-07-10T08:36:25.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledStandard",
+    "Display": "Changed profile Standard Platform User: Feature Flag Custom Metadata Type was enabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002VOzNKAW"
+    },
+    "Id": "0YmWy000002VOzNKAW",
+    "CreatedDate": "2024-07-10T08:36:13.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom",
+    "Display": "Changed profile Custom: Support Profile: DML Finalizer Custom Metadata Type was enabled",
+    "Section": "Manage Users"
+};
