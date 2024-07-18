@@ -545,3 +545,41 @@ export const SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard = {
     "Display": "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was enabled",
     "Section": "Manage Users"
 };
+
+export const profileCustAppStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002blN0KAI"
+    },
+    "Id": "0YmWy000002blN0KAI",
+    "CreatedDate": "2024-07-18T14:02:31.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileCustAppStandard",
+    "Display": "Changed profile System Administrator: Sample Console application is now Visible",
+    "Section": "Manage Users"
+};
+
+export const profileDefaultCustAppStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002blMzKAI"
+    },
+    "Id": "0YmWy000002blMzKAI",
+    "CreatedDate": "2024-07-18T14:02:31.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileDefaultCustAppStandard",
+    "Display": "Changed profile System Administrator: AppLauncher is now the default application",
+    "Section": "Manage Users"
+};

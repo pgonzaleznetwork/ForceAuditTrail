@@ -39,6 +39,20 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     sampleDisplay: 'Changed profile Sales Development Manager: AllTabSet is now the default application',
     changeCategory: ChangeCategory.SECURITY
   },
+  profileCustAppStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'applicationVisibilities',
+    sampleDisplay: "Changed profile System Administrator: Sample Console application is now Visible",
+    changeCategory: ChangeCategory.SECURITY
+},
+profileDefaultCustAppStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'applicationVisibilities',
+    sampleDisplay: "Changed profile System Administrator: AppLauncher is now the default application",
+    changeCategory: ChangeCategory.SECURITY
+},
   profileDescriptionChanged: {
     metadataType: MetadataType.Profile,
     operationType: OperationType.MODIFIED,
