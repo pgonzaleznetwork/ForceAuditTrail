@@ -9,7 +9,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom,
     SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom,
     SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom,
-    SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom
+    SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom,
+    SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -136,6 +137,17 @@ describe('Profile:Flow Access Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('flowAccesses');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+
+describe('Profile:Custom Permission Access Tests', () => {
+    test('SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('customPermissions');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

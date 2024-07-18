@@ -469,3 +469,79 @@ export const SetupEntityAccessAudit_Profile_FlowDefinition_EnabledCustom = {
     "Display": "Changed profile Custom: Support Profile: Create_a_Case_Custom Flow access was enabled",
     "Section": "Manage Users"
 };
+
+export const SetupEntityAccessAudit_Profile_CustomPermission_DisabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002blEvKAI"
+    },
+    "Id": "0YmWy000002blEvKAI",
+    "CreatedDate": "2024-07-18T13:57:22.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomPermission_DisabledCustom",
+    "Display": "Changed profile Custom: Marketing Profile: Nebula Logger: Can Execute Log Batch Purger Custom Permission was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomPermission_EnabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002blDJKAY"
+    },
+    "Id": "0YmWy000002blDJKAY",
+    "CreatedDate": "2024-07-18T13:57:12.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomPermission_EnabledCustom",
+    "Display": "Changed profile Custom: Marketing Profile: Nebula Logger: Can Execute Log Batch Purger Custom Permission was enabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomPermission_DisabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002blBhKAI"
+    },
+    "Id": "0YmWy000002blBhKAI",
+    "CreatedDate": "2024-07-18T13:56:52.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomPermission_DisabledStandard",
+    "Display": "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002bddyKAA"
+    },
+    "Id": "0YmWy000002bddyKAA",
+    "CreatedDate": "2024-07-18T13:56:38.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard",
+    "Display": "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was enabled",
+    "Section": "Manage Users"
+};

@@ -213,5 +213,33 @@ SetupEntityAccessAudit_Profile_FlowDefinition_EnabledCustom: {
   fieldModified: 'flowAccesses',
   sampleDisplay: "Changed profile Custom: Support Profile: Create_a_Case_Custom Flow access was enabled",
   changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_CustomPermission_DisabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'customPermissions',
+  sampleDisplay: "Changed profile Custom: Marketing Profile: Nebula Logger: Can Execute Log Batch Purger Custom Permission was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_CustomPermission_EnabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'customPermissions',
+  sampleDisplay: "Changed profile Custom: Marketing Profile: Nebula Logger: Can Execute Log Batch Purger Custom Permission was enabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_CustomPermission_DisabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'customPermissions',
+  sampleDisplay: "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'customPermissions',
+  sampleDisplay: "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was enabled",
+  changeCategory: ChangeCategory.SECURITY
 }
 };
