@@ -161,28 +161,28 @@ SetupEntityAccessAudit_Profile_ApexPage_EnabledStandard: {
 SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledStandard: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
-  fieldModified: 'customMetadataTypeAccesses',
+  fieldModified: 'customMetadataTypeAccesses|customSettingAccesses',
   sampleDisplay: "Changed profile Standard Platform User: Feature Flag Custom Metadata Type was disabled",
   changeCategory: ChangeCategory.SECURITY
 },
 SetupEntityAccessAudit_Profile_CustomEntityDefinition_DisabledCustom: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
-  fieldModified: 'customMetadataTypeAccesses',
+  fieldModified: 'customMetadataTypeAccesses|customSettingAccesses',
   sampleDisplay: "Changed profile Custom: Support Profile: DML Finalizer Custom Metadata Type was disabled",
   changeCategory: ChangeCategory.SECURITY
 },
 SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledStandard: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
-  fieldModified: 'customMetadataTypeAccesses',
+  fieldModified: 'customMetadataTypeAccesses|customSettingAccesses',
   sampleDisplay: "Changed profile Standard Platform User: Feature Flag Custom Metadata Type was enabled",
   changeCategory: ChangeCategory.SECURITY
 },
 SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
-  fieldModified: 'customMetadataTypeAccesses',
+  fieldModified: 'customMetadataTypeAccesses|customSettingAccesses',
   sampleDisplay: "Changed profile Custom: Support Profile: DML Finalizer Custom Metadata Type was enabled",
   changeCategory: ChangeCategory.SECURITY
 }

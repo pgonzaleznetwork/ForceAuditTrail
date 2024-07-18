@@ -123,7 +123,7 @@ describe('Profile:Custom Metadata Type Access Tests', () => {
         const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom);
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
-        expect(result.fieldModified).toBe('customMetadataTypeAccesses');
+        expect(result.fieldModified).toBe('customMetadataTypeAccesses|customSettingAccesses');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 
