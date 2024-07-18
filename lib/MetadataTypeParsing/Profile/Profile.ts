@@ -185,5 +185,33 @@ SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom: {
   fieldModified: 'customMetadataTypeAccesses|customSettingAccesses',
   sampleDisplay: "Changed profile Custom: Support Profile: DML Finalizer Custom Metadata Type was enabled",
   changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_FlowDefinition_DisabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'flowAccesses',
+  sampleDisplay: "Changed profile System Administrator: Create_a_Case_Custom Flow access was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_FlowDefinition_EnabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'flowAccesses',
+  sampleDisplay: "Changed profile System Administrator: Create_a_Case_Custom Flow access was enabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'flowAccesses',
+  sampleDisplay: "Changed profile Custom: Support Profile: Create_a_Case_Custom Flow access was disabled",
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_FlowDefinition_EnabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'flowAccesses',
+  sampleDisplay: "Changed profile Custom: Support Profile: Create_a_Case_Custom Flow access was enabled",
+  changeCategory: ChangeCategory.SECURITY
 }
 };

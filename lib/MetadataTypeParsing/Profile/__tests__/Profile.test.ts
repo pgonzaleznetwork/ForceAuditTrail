@@ -8,7 +8,8 @@ import {profileFlsChangedCustom,
     deletedLoginIpRange_withProfile,loginIpRange,
     SetupEntityAccessAudit_Profile_ApexClass_EnabledCustom,
     SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom,
-    SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom
+    SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom,
+    SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -127,4 +128,14 @@ describe('Profile:Custom Metadata Type Access Tests', () => {
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 
+});
+
+describe('Profile:Flow Access Tests', () => {
+    test('SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('flowAccesses');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
 });
