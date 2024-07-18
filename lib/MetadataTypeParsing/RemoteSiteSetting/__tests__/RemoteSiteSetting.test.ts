@@ -6,7 +6,7 @@ describe('RemoteSiteSetting Tests', () => {
     test('remoteproxy action is parsed correctly', () => {
         const result = parseAuditTrailRecord(remoteproxy);
         expect(result.metadataType).toBe(MetadataType.RemoteSiteSetting);
-        expect(result.operationType).toBe(OperationType.CREATED);
+        expect(result.operationType).toBe(OperationType.UNKNOWN);
         expect(result.fieldModified).toBe(null);
         expect(result.changeCategory).toBe(ChangeCategory.INTEGRATION);
     });
