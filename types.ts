@@ -46,6 +46,7 @@ export enum MetadataType{
   ProfilePasswordPolicy = 'ProfilePasswordPolicy',
   ExternalCredential = 'ExternalCredential',
   RemoteSiteSetting = 'RemoteSiteSetting',
+  NamedCredential = 'NamedCredential',
   Unknown = 'Unknown'
 }
 
