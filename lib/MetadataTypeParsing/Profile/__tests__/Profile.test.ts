@@ -10,7 +10,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_ApexPage_DisabledCustom,
     SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom,
     SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom,
-    SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard
+    SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard,
+    changedCatGroupVisibilityUserNode_NoneToAll
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -148,6 +149,17 @@ describe('Profile:Custom Permission Access Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('customPermissions');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+
+describe('Profile:Category Group Visibility Tests', () => {
+    test('changedCatGroupVisibilityUserNode_NoneToAll action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(changedCatGroupVisibilityUserNode_NoneToAll);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('categoryGroupVisibilities');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

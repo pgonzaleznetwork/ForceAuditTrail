@@ -583,3 +583,136 @@ export const profileDefaultCustAppStandard = {
     "Display": "Changed profile System Administrator: AppLauncher is now the default application",
     "Section": "Manage Users"
 };
+
+export const changedCatGroupVisibilityUserNode_CustomToAll = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fDY1KAM"
+    },
+    "Id": "0YmWy000002fDY1KAM",
+    "CreatedDate": "2024-07-23T15:45:53.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_CustomToAll",
+    "Display": "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to All",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_NoneToCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fDWPKA2"
+    },
+    "Id": "0YmWy000002fDWPKA2",
+    "CreatedDate": "2024-07-23T15:45:42.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_NoneToCustom",
+    "Display": "Changed visibility of All Articles Data Category Group for Custom: Support Profile from None to Custom: [All > Apex > SOQL]",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_CustomToNone = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fDTBKA2"
+    },
+    "Id": "0YmWy000002fDTBKA2",
+    "CreatedDate": "2024-07-23T15:44:56.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_CustomToNone",
+    "Display": "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to None",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_AllToCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fDRZKA2"
+    },
+    "Id": "0YmWy000002fDRZKA2",
+    "CreatedDate": "2024-07-23T15:44:46.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_AllToCustom",
+    "Display": "Changed visibility of All Articles Data Category Group for Custom: Support Profile from All to Custom: [All > Apex > SOQL]",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_CustomToCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fDMjKAM"
+    },
+    "Id": "0YmWy000002fDMjKAM",
+    "CreatedDate": "2024-07-23T15:44:20.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_CustomToCustom",
+    "Display": "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex] to Custom: [All]",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_AllToNone = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fC5hKAE"
+    },
+    "Id": "0YmWy000002fC5hKAE",
+    "CreatedDate": "2024-07-23T15:28:39.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_AllToNone",
+    "Display": "Changed visibility of All Articles Data Category Group for PT1 from All to None",
+    "Section": "Data Categories"
+};
+
+export const changedCatGroupVisibilityUserNode_NoneToAll = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002fBeHKAU"
+    },
+    "Id": "0YmWy000002fBeHKAU",
+    "CreatedDate": "2024-07-23T15:28:07.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "changedCatGroupVisibilityUserNode_NoneToAll",
+    "Display": "Changed visibility of All Articles Data Category Group for PT1 from None to All",
+    "Section": "Data Categories"
+};

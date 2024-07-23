@@ -255,5 +255,54 @@ SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard: {
   fieldModified: 'customPermissions',
   sampleDisplay: "Changed profile System Administrator: Access Restricted UI Permission Custom Permission was enabled",
   changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_CustomToAll: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to All",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_NoneToCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from None to Custom: [All > Apex > SOQL]",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_CustomToNone: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to None",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_AllToCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from All to Custom: [All > Apex > SOQL]",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_CustomToCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex] to Custom: [All]",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_AllToNone: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for PT1 from All to None",
+  changeCategory: ChangeCategory.SECURITY
+},
+changedCatGroupVisibilityUserNode_NoneToAll: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'categoryGroupVisibilities',
+  sampleDisplay: "Changed visibility of All Articles Data Category Group for PT1 from None to All",
+  changeCategory: ChangeCategory.SECURITY
 }
 };
