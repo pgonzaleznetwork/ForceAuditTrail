@@ -48,6 +48,7 @@ export enum MetadataType{
   RemoteSiteSetting = 'RemoteSiteSetting',
   NamedCredential = 'NamedCredential',
   AuthProvider = 'AuthProvider',
+  ExternalDataSource = 'ExternalDataSource',
   Unknown = 'Unknown'
 }
 

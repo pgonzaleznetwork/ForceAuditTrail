@@ -7,6 +7,7 @@ import {parseResultsByApexClassActions} from "./ApexClass/ApexClass";
 import { parseResultsByRemoteSiteSettingActions} from "./RemoteSiteSetting/RemoteSiteSetting";
 import {parseResultsByNamedCredentialActions} from "./NamedCredential/NamedCredential";
 import {parseResultsByAuthProviderActions} from "./AuthProvider/AuthProvider";
+import {parseResultsByExternalDataSourceActions} from "./ExternalDataSource/ExternalDataSource";
 import { ParseResult } from '../../types';
 
 
@@ -19,5 +20,6 @@ export const parseResultsbyMetadataType: Record<string, ParseResult> = {
   ...parseResultsByApexClassActions,
   ...parseResultsByRemoteSiteSettingActions,
   ...parseResultsByNamedCredentialActions,
-  ...parseResultsByAuthProviderActions
+  ...parseResultsByAuthProviderActions,
+  ...parseResultsByExternalDataSourceActions
 };
