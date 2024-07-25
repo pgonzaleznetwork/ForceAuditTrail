@@ -304,5 +304,33 @@ changedCatGroupVisibilityUserNode_NoneToAll: {
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for PT1 from None to All",
   changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'externalDataSourceAccesses',
+  sampleDisplay: 'Changed profile System Administrator: Replication Org External Data Source access was disabled',
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'externalDataSourceAccesses',
+  sampleDisplay: 'Changed profile System Administrator: Replication Org External Data Source access was enabled',
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'externalDataSourceAccesses',
+  sampleDisplay: 'Changed profile Custom: Support Profile: Replication Org External Data Source access was disabled',
+  changeCategory: ChangeCategory.SECURITY
+},
+SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'externalDataSourceAccesses',
+  sampleDisplay: 'Changed profile Custom: Support Profile: Replication Org External Data Source access was enabled',
+  changeCategory: ChangeCategory.SECURITY
 }
 };

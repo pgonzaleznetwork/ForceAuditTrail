@@ -11,7 +11,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_CustomEntityDefinition_EnabledCustom,
     SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom,
     SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard,
-    changedCatGroupVisibilityUserNode_NoneToAll
+    changedCatGroupVisibilityUserNode_NoneToAll,
+    SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -160,6 +161,17 @@ describe('Profile:Category Group Visibility Tests', () => {
         expect(result.metadataType).toBe(MetadataType.Profile);
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('categoryGroupVisibilities');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+
+describe('Profile:External Data Source Access Tests', () => {
+    test('SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('externalDataSourceAccesses');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
 });

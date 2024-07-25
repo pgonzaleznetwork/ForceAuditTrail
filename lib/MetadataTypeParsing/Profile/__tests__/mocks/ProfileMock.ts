@@ -716,3 +716,79 @@ export const changedCatGroupVisibilityUserNode_NoneToAll = {
     "Display": "Changed visibility of All Articles Data Category Group for PT1 from None to All",
     "Section": "Data Categories"
 };
+
+export const SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002hkpeKAA"
+    },
+    "Id": "0YmWy000002hkpeKAA",
+    "CreatedDate": "2024-07-25T11:29:10.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledStandard",
+    "Display": "Changed profile System Administrator: Replication Org External Data Source access was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledStandard = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002hihOKAQ"
+    },
+    "Id": "0YmWy000002hihOKAQ",
+    "CreatedDate": "2024-07-25T11:28:59.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledStandard",
+    "Display": "Changed profile System Administrator: Replication Org External Data Source access was enabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002hkknKAA"
+    },
+    "Id": "0YmWy000002hkknKAA",
+    "CreatedDate": "2024-07-25T11:28:22.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledCustom",
+    "Display": "Changed profile Custom: Support Profile: Replication Org External Data Source access was disabled",
+    "Section": "Manage Users"
+};
+
+export const SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom = {
+    "attributes": {
+        "type": "SetupAuditTrail",
+        "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002hkjBKAQ"
+    },
+    "Id": "0YmWy000002hkjBKAQ",
+    "CreatedDate": "2024-07-25T11:28:12.000+0000",
+    "CreatedBy": {
+        "attributes": {
+            "type": "User",
+            "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+        },
+        "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom",
+    "Display": "Changed profile Custom: Support Profile: Replication Org External Data Source access was enabled",
+    "Section": "Manage Users"
+};
