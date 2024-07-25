@@ -10,5 +10,12 @@ export const parseResultsByApexClassActions: Record<string, ParseResult> = {
     fieldModified: null,
     sampleDisplay: "Changed AccountTriggerHandler Apex Class code",
     changeCategory: ChangeCategory.BUSINESS_LOGIC_CODE
+  },
+  createdApexClass: {
+    metadataType: MetadataType.ApexClass,
+    operationType: OperationType.CREATED,
+    fieldModified: null,
+    sampleDisplay: "Created PastryTests Apex Class code",
+    changeCategory: ChangeCategory.BUSINESS_LOGIC_CODE
   }
 };
