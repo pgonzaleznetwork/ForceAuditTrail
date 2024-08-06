@@ -104,14 +104,14 @@ profileDefaultCustAppStandard: {
   },
   deletedLoginIpRange_withProfile: {
     metadataType: MetadataType.Profile,
-    operationType: OperationType.DELETED,
+    operationType: OperationType.MODIFIED,
     fieldModified: 'loginIpRanges',
     sampleDisplay: "Deleted Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
     changeCategory: ChangeCategory.SECURITY
 },
 loginIpRange: {
     metadataType: MetadataType.Profile,
-    operationType: OperationType.CREATED,
+    operationType: OperationType.MODIFIED,
     fieldModified: 'loginIpRanges',
     sampleDisplay: "Added Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
     changeCategory: ChangeCategory.SECURITY

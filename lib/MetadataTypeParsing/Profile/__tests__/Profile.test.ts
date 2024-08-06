@@ -88,7 +88,7 @@ describe('Profile:Login IP Ranges Tests', () => {
     test('deletedLoginIpRange_withProfile action is parsed correctly', () => {
         const result = parseAuditTrailRecord(deletedLoginIpRange_withProfile);
         expect(result.metadataType).toBe(MetadataType.Profile);
-        expect(result.operationType).toBe(OperationType.DELETED);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('loginIpRanges');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
@@ -96,7 +96,7 @@ describe('Profile:Login IP Ranges Tests', () => {
     test('loginIpRange action is parsed correctly', () => {
         const result = parseAuditTrailRecord(loginIpRange);
         expect(result.metadataType).toBe(MetadataType.Profile);
-        expect(result.operationType).toBe(OperationType.CREATED);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('loginIpRanges');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
     });
