@@ -13,7 +13,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard,
     changedCatGroupVisibilityUserNode_NoneToAll,
     SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom,
-    profilePageLayoutChangedCustom
+    profilePageLayoutChangedCustom,
+    updateLoginFlowProfile
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -187,3 +188,14 @@ describe('Profile:Page Layout Assignments Tests', () => {
         expect(result.changeCategory).toBe(ChangeCategory.COSMETIC);
     });
 });
+
+
+describe('Profile:Login Flow Tests', () => {
+    test('updateLoginFlowProfile action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(updateLoginFlowProfile);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('loginFlows');
+        expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    }
+)});

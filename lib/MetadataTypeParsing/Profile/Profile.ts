@@ -346,5 +346,26 @@ profilePageLayoutChangedStandard: {
   fieldModified: 'layoutAssignments',
   sampleDisplay: "Changed profile Contract Manager: Account page layout for Master record type was changed from Account Layout to Account (Marketing) Layout",
   changeCategory: ChangeCategory.COSMETIC
+},
+deleteLoginFlow: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'loginFlows',
+  sampleDisplay: "Deleted UI login flow for Standard User",
+  changeCategory: ChangeCategory.SECURITY
+},
+insertLoginFlow: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'loginFlows',
+  sampleDisplay: "Enabled UI Login flow for Standard User with flow standard profile flow",
+  changeCategory: ChangeCategory.SECURITY
+},
+updateLoginFlowProfile: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'loginFlows',
+  sampleDisplay: "Reassigned UI login flow for Contract Manager to Custom: Sales Profile",
+  changeCategory: ChangeCategory.SECURITY
 }
 };

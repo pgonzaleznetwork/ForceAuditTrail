@@ -831,3 +831,60 @@ export const profilePageLayoutChangedCustom = {
     "Section": "Manage Users"
   };
   
+  export const deleteLoginFlow = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ujvlKAA"
+    },
+    "Id": "0YmWy000002ujvlKAA",
+    "CreatedDate": "2024-08-06T15:27:00.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "deleteLoginFlow",
+    "Display": "Deleted UI login flow for Standard User",
+    "Section": "Login Flows"
+  };
+  
+  export const insertLoginFlow = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002uju9KAA"
+    },
+    "Id": "0YmWy000002uju9KAA",
+    "CreatedDate": "2024-08-06T15:26:50.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "insertLoginFlow",
+    "Display": "Enabled UI Login flow for Standard User with flow standard profile flow",
+    "Section": "Login Flows"
+  };
+  
+  export const updateLoginFlowProfile = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ujZBKAY"
+    },
+    "Id": "0YmWy000002ujZBKAY",
+    "CreatedDate": "2024-08-06T15:24:09.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "updateLoginFlowProfile",
+    "Display": "Reassigned UI login flow for Contract Manager to Custom: Sales Profile",
+    "Section": "Login Flows"
+  };
+  
