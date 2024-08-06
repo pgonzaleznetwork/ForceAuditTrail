@@ -12,7 +12,8 @@ import {profileFlsChangedCustom,
     SetupEntityAccessAudit_Profile_FlowDefinition_DisabledCustom,
     SetupEntityAccessAudit_Profile_CustomPermission_EnabledStandard,
     changedCatGroupVisibilityUserNode_NoneToAll,
-    SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom
+    SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom,
+    profilePageLayoutChangedCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -173,5 +174,16 @@ describe('Profile:External Data Source Access Tests', () => {
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('externalDataSourceAccesses');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    });
+});
+
+
+describe('Profile:Page Layout Assignments Tests', () => {
+    test('profilePageLayoutChangedCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profilePageLayoutChangedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('layoutAssignments');
+        expect(result.changeCategory).toBe(ChangeCategory.COSMETIC);
     });
 });

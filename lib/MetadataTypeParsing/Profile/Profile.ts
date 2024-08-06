@@ -332,5 +332,19 @@ SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom: {
   fieldModified: 'externalDataSourceAccesses',
   sampleDisplay: 'Changed profile Custom: Support Profile: Replication Org External Data Source access was enabled',
   changeCategory: ChangeCategory.SECURITY
+},
+profilePageLayoutChangedCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'layoutAssignments',
+  sampleDisplay: "Changed profile Custom: Support Profile: Account page layout for Master record type was changed from Account (Support) Layout to Account (Sales) Layout",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profilePageLayoutChangedStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'layoutAssignments',
+  sampleDisplay: "Changed profile Contract Manager: Account page layout for Master record type was changed from Account Layout to Account (Marketing) Layout",
+  changeCategory: ChangeCategory.COSMETIC
 }
 };

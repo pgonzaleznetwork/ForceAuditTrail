@@ -792,3 +792,42 @@ export const SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom = {
     "Display": "Changed profile Custom: Support Profile: Replication Org External Data Source access was enabled",
     "Section": "Manage Users"
 };
+
+export const profilePageLayoutChangedCustom = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ugrSKAQ"
+    },
+    "Id": "0YmWy000002ugrSKAQ",
+    "CreatedDate": "2024-08-06T15:18:14.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profilePageLayoutChangedCustom",
+    "Display": "Changed profile Custom: Support Profile: Account page layout for Master record type was changed from Account (Support) Layout to Account (Sales) Layout",
+    "Section": "Manage Users"
+  };
+  
+  export const profilePageLayoutChangedStandard = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ugrRKAQ"
+    },
+    "Id": "0YmWy000002ugrRKAQ",
+    "CreatedDate": "2024-08-06T15:18:14.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profilePageLayoutChangedStandard",
+    "Display": "Changed profile Contract Manager: Account page layout for Master record type was changed from Account Layout to Account (Marketing) Layout",
+    "Section": "Manage Users"
+  };
+  
