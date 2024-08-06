@@ -367,5 +367,47 @@ updateLoginFlowProfile: {
   fieldModified: 'loginFlows',
   sampleDisplay: "Reassigned UI login flow for Contract Manager to Custom: Sales Profile",
   changeCategory: ChangeCategory.SECURITY
+},
+profilerecordTypeVisibilitiesChangedCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Custom: Support Profile: default record type for Account changed from Customer to Partner",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profileRecordTypeRemovedCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Custom: Support Profile: Customer record type was removed from Account object",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profileRecordTypeRemovedStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Standard Platform User: Partner record type was removed from Account object",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profilerecordTypeVisibilitiesChangedStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Standard Platform User: default record type for Account changed from --Master-- to Customer",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profileRecordTypeAddedStandard: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Standard Platform User: Partner record type was added to Account object",
+  changeCategory: ChangeCategory.COSMETIC
+},
+profileRecordTypeAddedCustom: {
+  metadataType: MetadataType.Profile,
+  operationType: OperationType.MODIFIED,
+  fieldModified: 'recordTypeVisibilities',
+  sampleDisplay: "Changed profile Custom: Support Profile: Partner record type was added to Account object",
+  changeCategory: ChangeCategory.COSMETIC
 }
 };

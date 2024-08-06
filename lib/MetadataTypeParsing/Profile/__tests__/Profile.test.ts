@@ -14,7 +14,8 @@ import {profileFlsChangedCustom,
     changedCatGroupVisibilityUserNode_NoneToAll,
     SetupEntityAccessAudit_Profile_ExternalDataSource_EnabledCustom,
     profilePageLayoutChangedCustom,
-    updateLoginFlowProfile
+    updateLoginFlowProfile,
+    profileRecordTypeAddedCustom
 } from "../__tests__/mocks/ProfileMock";
 
 describe('Profile Tests', () => {
@@ -197,5 +198,15 @@ describe('Profile:Login Flow Tests', () => {
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('loginFlows');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+    }
+)});
+
+describe('Profile:Record Type Assignments Tests', () => {
+    test('profileRecordTypeAddedCustom action is parsed correctly', () => {
+        const result = parseAuditTrailRecord(profileRecordTypeAddedCustom);
+        expect(result.metadataType).toBe(MetadataType.Profile);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('recordTypeVisibilities');
+        expect(result.changeCategory).toBe(ChangeCategory.COSMETIC);
     }
 )});

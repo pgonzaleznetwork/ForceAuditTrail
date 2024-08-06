@@ -888,3 +888,117 @@ export const profilePageLayoutChangedCustom = {
     "Section": "Login Flows"
   };
   
+  export const profileDefaultRecordTypeChangedCustom = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ukyIKAQ"
+    },
+    "Id": "0YmWy000002ukyIKAQ",
+    "CreatedDate": "2024-08-06T15:49:50.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileDefaultRecordTypeChangedCustom",
+    "Display": "Changed profile Custom: Support Profile: default record type for Account changed from Customer to Partner",
+    "Section": "Manage Users"
+  };
+  
+  export const profileRecordTypeRemovedCustom = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ukyHKAQ"
+    },
+    "Id": "0YmWy000002ukyHKAQ",
+    "CreatedDate": "2024-08-06T15:49:50.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileRecordTypeRemovedCustom",
+    "Display": "Changed profile Custom: Support Profile: Customer record type was removed from Account object",
+    "Section": "Manage Users"
+  };
+  
+  export const profileRecordTypeRemovedStandard = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ucO3KAI"
+    },
+    "Id": "0YmWy000002ucO3KAI",
+    "CreatedDate": "2024-08-06T15:47:58.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileRecordTypeRemovedStandard",
+    "Display": "Changed profile Standard Platform User: Partner record type was removed from Account object",
+    "Section": "Manage Users"
+  };
+  
+  export const profileDefaultRecordTypeChangedStandard = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ukqGKAQ"
+    },
+    "Id": "0YmWy000002ukqGKAQ",
+    "CreatedDate": "2024-08-06T15:47:40.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileDefaultRecordTypeChangedStandard",
+    "Display": "Changed profile Standard Platform User: default record type for Account changed from --Master-- to Customer",
+    "Section": "Manage Users"
+  };
+  
+  export const profileRecordTypeAddedStandard = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ukqFKAQ"
+    },
+    "Id": "0YmWy000002ukqFKAQ",
+    "CreatedDate": "2024-08-06T15:47:40.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileRecordTypeAddedStandard",
+    "Display": "Changed profile Standard Platform User: Partner record type was added to Account object",
+    "Section": "Manage Users"
+  };
+  
+  export const profileRecordTypeAddedCustom = {
+    "attributes": {
+      "type": "SetupAuditTrail",
+      "url": "/services/data/v60.0/sobjects/SetupAuditTrail/0YmWy000002ukobKAA"
+    },
+    "Id": "0YmWy000002ukobKAA",
+    "CreatedDate": "2024-08-06T15:47:07.000+0000",
+    "CreatedBy": {
+      "attributes": {
+        "type": "User",
+        "url": "/services/data/v60.0/sobjects/User/005Wy000000AcgjIAC"
+      },
+      "Username": "uat@pablogonzalez.io"
+    },
+    "Action": "profileRecordTypeAddedCustom",
+    "Display": "Changed profile Custom: Support Profile: Partner record type was added to Account object",
+    "Section": "Manage Users"
+  };
+  
