@@ -85,7 +85,7 @@ profileDefaultCustAppStandard: {
     metadataType: MetadataType.Profile,
     operationType: OperationType.MODIFIED,
     fieldModified: 'fieldPermissions',
-    sampleDisplay: "Changed profile Authenticated Website: field-level security for Account: Number of Locations was changed from Read/Write to No Access",
+    sampleDisplay: "Changed profile Minimum Access - Salesforce: field-level security for Account: Customer Priority was changed from 0 to 2",
     changeCategory: ChangeCategory.SECURITY
   },
   profileLoginHoursChangedStandard: {
