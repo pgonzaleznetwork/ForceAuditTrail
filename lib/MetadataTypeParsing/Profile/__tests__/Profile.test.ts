@@ -26,6 +26,12 @@ describe('Profile Tests', () => {
         expect(result.operationType).toBe(OperationType.MODIFIED);
         expect(result.fieldModified).toBe('userPermissions');
         expect(result.changeCategory).toBe(ChangeCategory.SECURITY);
+
+        let nameFunction = result.nameExtractorFunction;
+        if (nameFunction) {
+            expect(nameFunction(profilePermChangedCustom.Display)).toBe('Sales Development Manager');
+        }
+
     });
 
 

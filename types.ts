@@ -59,4 +59,5 @@ export interface ParseResult {
   sampleDisplay: string | null;
   setupAuditTrailRecord?: SetupAuditTrailRecord;
   changeCategory: ChangeCategory;
+  nameExtractorFunction?: (input: string) => string | null 
 }

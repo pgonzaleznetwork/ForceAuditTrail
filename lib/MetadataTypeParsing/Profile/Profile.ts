@@ -2,6 +2,7 @@ import { ParseResult } from '../../../types';
 import { OperationType } from '../../../types';
 import { MetadataType } from '../../../types';
 import { ChangeCategory } from '../../../types';
+import { extractProfileName } from './utils/regex';
 
 export const parseResultsByProfileActions: Record<string, ParseResult> = {
   profilePermChangedCustom: {
@@ -9,7 +10,8 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     operationType: OperationType.MODIFIED,
     fieldModified: 'userPermissions',
     sampleDisplay: `Changed profile Sales Development Manager: general user permission Access to view Data Assessment was changed from disabled to enabled`,
-    changeCategory: ChangeCategory.SECURITY
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractProfileName
   },
   profileOlpChangedCustom: {
     metadataType: MetadataType.Profile,
