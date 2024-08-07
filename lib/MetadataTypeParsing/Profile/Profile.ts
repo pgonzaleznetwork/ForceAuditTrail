@@ -25,6 +25,13 @@ export const parseResultsByProfileActions: Record<string, ParseResult> = {
     sampleDisplay: 'Changed profile Sales Development Manager: Active Scratch Orgs tab was changed from Default Off to Default On',
     changeCategory: ChangeCategory.COSMETIC
   },
+  profileTabsetChangedStandard: {
+    metadataType: MetadataType.Profile,
+    operationType: OperationType.MODIFIED,
+    fieldModified: 'tabVisibilities',
+    sampleDisplay: 'Changed profile Standard Platform User: Analytics tab was changed from Default On to Default Off',
+    changeCategory: ChangeCategory.COSMETIC
+  },
   profileCustAppCustom: {
     metadataType: MetadataType.Profile,
     operationType: OperationType.MODIFIED,
