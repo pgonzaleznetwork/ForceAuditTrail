@@ -25,3 +25,11 @@ export function extractProfileNameFromIpRange(input : string) : string | null {
     return match ? match[1].trim() : null;
 }
 
+export function extractProfileNameFromDataCategory(input : string) : string | null {
+
+    const regex = /Changed visibility of All Articles Data Category Group for\s+(.+?)\s+from\s/;
+    
+    const match = input.match(regex);
+    
+    return match ? match[1].trim() : null;
+}

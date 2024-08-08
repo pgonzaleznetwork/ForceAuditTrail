@@ -1,5 +1,6 @@
 import {extractProfileName,
-    extractProfileNameFromIpRange
+    extractProfileNameFromIpRange,
+    extractProfileNameFromDataCategory
 } from '../../Profile/utils/regex';
 
 describe('Profile Regex from most entries', () => {
@@ -33,4 +34,13 @@ describe('Profile Regex from IP Range', () => {
     
 });
 
+describe('Profile Regex from Data Category', () => {
+
+    let defaultString :string = `Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex] to Custom: [All]`;
+
+    it('should extract profile name from the string', () => {
+        expect(extractProfileNameFromDataCategory(defaultString)).toBe('Custom: Support Profile');
+    });
+
+});
 

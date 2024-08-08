@@ -2,7 +2,9 @@ import { ParseResult } from '../../../types';
 import { OperationType } from '../../../types';
 import { MetadataType } from '../../../types';
 import { ChangeCategory } from '../../../types';
-import { extractProfileName , extractProfileNameFromIpRange} from './utils/regex';
+import { extractProfileName , extractProfileNameFromIpRange,
+  extractProfileNameFromDataCategory
+} from './utils/regex';
 
 export const parseResultsByProfileActions: Record<string, ParseResult> = {
   profilePermChangedCustom: {
@@ -306,49 +308,56 @@ changedCatGroupVisibilityUserNode_CustomToAll: {
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to All",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_NoneToCustom: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from None to Custom: [All > Apex > SOQL]",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_CustomToNone: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex > SOQL] to None",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_AllToCustom: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from All to Custom: [All > Apex > SOQL]",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_CustomToCustom: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for Custom: Support Profile from Custom: [All > Apex] to Custom: [All]",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_AllToNone: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for PT1 from All to None",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 changedCatGroupVisibilityUserNode_NoneToAll: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'categoryGroupVisibilities',
   sampleDisplay: "Changed visibility of All Articles Data Category Group for PT1 from None to All",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction:extractProfileNameFromDataCategory
 },
 SetupEntityAccessAudit_Profile_ExternalDataSource_DisabledStandard: {
   metadataType: MetadataType.Profile,
