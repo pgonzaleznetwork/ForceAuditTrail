@@ -33,3 +33,17 @@ export function extractProfileNameFromDataCategory(input : string) : string | nu
     
     return match ? match[1].trim() : null;
 }
+
+export function extractProfileNameFromLoginFlowEvent(input : string) : string | null {
+    // Regex for "Deleted" case by default
+    let regex = /for\s+(.+)$/;
+    
+    if (input.startsWith("Enabled") || input.startsWith("Reassigned")) {
+        // Regex for "Enabled" and "Reassigned" cases
+        regex = /for\s+(.+?)\s+(?:to|with)/;
+    }
+    
+    const match = input.match(regex);
+    
+    return match ? match[1].trim() : null;
+}

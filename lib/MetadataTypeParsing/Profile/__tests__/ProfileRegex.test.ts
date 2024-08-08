@@ -1,6 +1,7 @@
 import {extractProfileName,
     extractProfileNameFromIpRange,
-    extractProfileNameFromDataCategory
+    extractProfileNameFromDataCategory,
+    extractProfileNameFromLoginFlowEvent
 } from '../../Profile/utils/regex';
 
 describe('Profile Regex from most entries', () => {
@@ -42,5 +43,26 @@ describe('Profile Regex from Data Category', () => {
         expect(extractProfileNameFromDataCategory(defaultString)).toBe('Custom: Support Profile');
     });
 
+});
+
+describe('Profile Regex from UI Login Flow', () => {
+
+    it('should extract profile name from "Enabled" string', () => {
+
+        const input1 = "Enabled UI Login flow for for Standard User with flow standard profile flow";
+        expect(extractProfileNameFromLoginFlowEvent(input1)).toBe('for Standard User');
+    });
+
+    it('should extract profile name from "Deleted" string', () => {
+
+        const input2 = "Deleted UI login flow for for Standard User";
+        expect(extractProfileNameFromLoginFlowEvent(input2)).toBe('for Standard User');
+    });
+
+    it('should extract profile name from "Reassigned" string', () => {
+
+        const input3 = "Reassigned UI login flow for for Contract Manager to Custom: Sales Profile";
+        expect(extractProfileNameFromLoginFlowEvent(input3)).toBe('for Contract Manager');
+    });
 });
 

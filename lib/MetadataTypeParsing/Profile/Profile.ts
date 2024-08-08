@@ -3,7 +3,8 @@ import { OperationType } from '../../../types';
 import { MetadataType } from '../../../types';
 import { ChangeCategory } from '../../../types';
 import { extractProfileName , extractProfileNameFromIpRange,
-  extractProfileNameFromDataCategory
+  extractProfileNameFromDataCategory,
+  extractProfileNameFromLoginFlowEvent
 } from './utils/regex';
 
 export const parseResultsByProfileActions: Record<string, ParseResult> = {
@@ -412,21 +413,25 @@ deleteLoginFlow: {
   operationType: OperationType.MODIFIED,
   fieldModified: 'loginFlows',
   sampleDisplay: "Deleted UI login flow for Standard User",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction: extractProfileNameFromLoginFlowEvent
+
 },
 insertLoginFlow: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'loginFlows',
   sampleDisplay: "Enabled UI Login flow for Standard User with flow standard profile flow",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction: extractProfileNameFromLoginFlowEvent
 },
 updateLoginFlowProfile: {
   metadataType: MetadataType.Profile,
   operationType: OperationType.MODIFIED,
   fieldModified: 'loginFlows',
   sampleDisplay: "Reassigned UI login flow for Contract Manager to Custom: Sales Profile",
-  changeCategory: ChangeCategory.SECURITY
+  changeCategory: ChangeCategory.SECURITY,
+  nameExtractorFunction: extractProfileNameFromLoginFlowEvent
 },
 profilerecordTypeVisibilitiesChangedCustom: {
   metadataType: MetadataType.Profile,
