@@ -2,7 +2,7 @@ import { ParseResult } from '../../../types';
 import { OperationType } from '../../../types';
 import { MetadataType } from '../../../types';
 import { ChangeCategory } from '../../../types';
-import { extractProfileName } from './utils/regex';
+import { extractProfileName , extractProfileNameFromIpRange} from './utils/regex';
 
 export const parseResultsByProfileActions: Record<string, ParseResult> = {
   profilePermChangedCustom: {
@@ -130,14 +130,16 @@ profileDefaultCustAppStandard: {
     operationType: OperationType.MODIFIED,
     fieldModified: 'loginIpRanges',
     sampleDisplay: "Deleted Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
-    changeCategory: ChangeCategory.SECURITY
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractProfileNameFromIpRange
 },
 loginIpRange: {
     metadataType: MetadataType.Profile,
     operationType: OperationType.MODIFIED,
     fieldModified: 'loginIpRanges',
     sampleDisplay: "Added Login Ip Range to Custom: Support Profile from 1.1.1.2 to 255.255.255.255",
-    changeCategory: ChangeCategory.SECURITY
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractProfileNameFromIpRange
   },
   SetupEntityAccessAudit_Profile_ApexClass_DisabledStandard: {
     metadataType: MetadataType.Profile,

@@ -1,9 +1,7 @@
-
-
 export function extractProfileName(input : string) : string | null {
     let regex;
     
-    // Check if the input contains "field-level security"
+    
     if (input.includes("field-level security")) {
         // Regular expression to match the profile name up to the last colon before "field-level security"
         regex = /Changed profile\s+(.*):\s+field-level security/;
@@ -12,9 +10,18 @@ export function extractProfileName(input : string) : string | null {
         regex = /Changed profile\s+([^:]+(?::[^:]+)?):/;
     }
     
-    // Execute the regex on the input string
+    
     const match = input.match(regex);
     
-    // If there's a match, return the captured group, otherwise return null
     return match ? match[1].trim() : null;
 }
+
+export function extractProfileNameFromIpRange(input : string) : string | null {
+    // Regular expression to match the profile name between "to" and "from"
+    const regex = /to\s+(.+?)\s+from/;
+    
+    const match = input.match(regex);
+    
+    return match ? match[1].trim() : null;
+}
+
