@@ -4,10 +4,20 @@ import {createdCFAutoNumCustom,
     changedCFFieldHelpCustom,
     changedCFAutoNumCustom,
     dataClassificationUpdate,
+    filteredLookupRequired,
     add_external_id} from "../__tests__/mocks/CustomFieldMock";
 
 
 describe('CustomField Tests', () => {
+
+    test('filteredLookupRequired action is parsed correctly', () => {  
+        const result = parseAuditTrailRecord(filteredLookupRequired);
+        expect(result.metadataType).toBe(MetadataType.CustomField);
+        expect(result.operationType).toBe(OperationType.MODIFIED);
+        expect(result.fieldModified).toBe('LookupFilter.isOptional');
+        expect(result.changeCategory).toBe(ChangeCategory.DATABASE_CONFIGURATION);
+
+    });
 
     test('createdCFAutoNumCustom action is parsed correctly', () => {
 
