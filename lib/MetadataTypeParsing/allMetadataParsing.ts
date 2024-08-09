@@ -8,12 +8,14 @@ import { parseResultsByRemoteSiteSettingActions} from "./RemoteSiteSetting/Remot
 import {parseResultsByNamedCredentialActions} from "./NamedCredential/NamedCredential";
 import {parseResultsByAuthProviderActions} from "./AuthProvider/AuthProvider";
 import {parseResultsByExternalDataSourceActions} from "./ExternalDataSource/ExternalDataSource";
+import {parseResultsByCustomFieldActions} from "./CustomField/CustomField";
 import { ParseResult } from '../../types';
 
 
 export const parseResultsbyMetadataType: Record<string, ParseResult> = {
   ...parseResultsByValidationRuleActions,
   ...parseResultsByProfileActions,
+  ...parseResultsByCustomFieldActions,
   ...parseResultsByProfileSessionSettingActions,
   ...parseResultsByProfilePasswordPolicyActions,
   ...parseResultsByExternalCredentialActions,
