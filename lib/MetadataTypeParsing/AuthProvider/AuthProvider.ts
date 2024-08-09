@@ -2,21 +2,24 @@ import { ParseResult } from '../../../types';
 import { OperationType } from '../../../types';
 import { MetadataType } from '../../../types';
 import { ChangeCategory } from '../../../types';
+import {extractNameFromAuthProviderEvent} from './utils/regex';
 
 export const parseResultsByAuthProviderActions: Record<string, ParseResult> = {
   enableRequireMfa: {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: 'requireMfa',
-    sampleDisplay: "Enabled \"Require MFA on Sign-In\" for Salesforce Org Provider",
-    changeCategory: ChangeCategory.SECURITY
+    sampleDisplay: "Enabled \"Require MFA on Sign-In\" for for Org Provider",
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractNameFromAuthProviderEvent
   },
   enableSendSecretInApis: {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: 'sendSecretInApis',
-    sampleDisplay: "Enabled \"Send secrets in APIs\" for Salesforce Org Provider",
-    changeCategory: ChangeCategory.SECURITY
+    sampleDisplay: "Enabled \"Send secrets in APIs\" for for Org Provider",
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractNameFromAuthProviderEvent
   },
   changeAuthProviderConsumerSecret: {
     metadataType: MetadataType.AuthProvider,
@@ -36,8 +39,9 @@ export const parseResultsByAuthProviderActions: Record<string, ParseResult> = {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: 'sendSecretInApis',
-    sampleDisplay: "Disabled \"Send secrets in APIs\" for Salesforce Org Provider",
-    changeCategory: ChangeCategory.SECURITY
+    sampleDisplay: "Disabled \"Send secrets in APIs\" for for Org Provider",
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractNameFromAuthProviderEvent
   },
   addAuthProviderLogoutUrl: {
     metadataType: MetadataType.AuthProvider,
@@ -50,7 +54,7 @@ export const parseResultsByAuthProviderActions: Record<string, ParseResult> = {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: 'iconUrl',
-    sampleDisplay: "Added Auth. Provider Icon URL https://login.salesforce.com/icons/amazon-black.png",
+    sampleDisplay: "Added Auth. Provider Icon URL https://login.for.com/icons/amazon-black.png",
     changeCategory: ChangeCategory.COSMETIC
   },
   addAuthProviderExecutionUser: {
@@ -71,14 +75,15 @@ export const parseResultsByAuthProviderActions: Record<string, ParseResult> = {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: 'requireMfa',
-    sampleDisplay: "Disabled \"Require MFA on Sign-In\" for Salesforce Org Provider",
-    changeCategory: ChangeCategory.SECURITY
+    sampleDisplay: "Disabled \"Require MFA on Sign-In\" for for Org Provider",
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractNameFromAuthProviderEvent
   },
   enableOptimization: {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.MODIFIED,
     fieldModified: null,
-    sampleDisplay: "Enabled \"Use subdomain in callback URLs\" for Salesforce Org Provider",
+    sampleDisplay: "Enabled \"Use subdomain in callback URLs\" for for Org Provider",
     changeCategory: ChangeCategory.SECURITY
   },
   addAuthProviderErrorUrl: {
@@ -92,7 +97,8 @@ export const parseResultsByAuthProviderActions: Record<string, ParseResult> = {
     metadataType: MetadataType.AuthProvider,
     operationType: OperationType.CREATED,
     fieldModified: null,
-    sampleDisplay: "Created Auth. Provider Salesforce Org Provider",
-    changeCategory: ChangeCategory.SECURITY
+    sampleDisplay: "Created Auth. Provider for Org Provider",
+    changeCategory: ChangeCategory.SECURITY,
+    nameExtractorFunction: extractNameFromAuthProviderEvent
   }
 };
