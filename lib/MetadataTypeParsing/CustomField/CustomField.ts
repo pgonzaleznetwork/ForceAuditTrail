@@ -33,6 +33,71 @@ export const parseResultsByCustomFieldActions: Record<string, ParseResult> = {
         changeCategory: ChangeCategory.DATABASE_CONFIGURATION
     },
 
+    createdCFCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.CREATED,
+        fieldModified: null,
+        sampleDisplay: "Created custom field checkbox field (Checkbox) on Brokers",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    changedCFDefaultCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'defaultValue',
+        sampleDisplay: "Changed default value for checkbox field custom field on Brokers from Checked to Unchecked",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    changedCFDefaultFormulaCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'defaultValue',
+        sampleDisplay: "Changed default value for date field custom field custom field on Brokers from null to TODAY()",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    changedCFUniqueOnCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'unique',
+        sampleDisplay: "Organization setup action: changedCFUniqueOnCustom has changed from email field to Brokers",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    changedCFUniqueOffCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'unique',
+        sampleDisplay: "Organization setup action: changedCFUniqueOffCustom has changed from email field to Brokers",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    changedCFScaleCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'scale',
+        sampleDisplay: "Changed decimal places for currency custom field custom field on Brokers from 0 to 1",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+    	
+    changedCFCaseSensitiveOffCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'caseSensitive',
+        sampleDisplay: "Organization setup action: changedCFCaseSensitiveOffCustom has changed from email field to Brokers",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+
+    changedCFLengthCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'length',
+        sampleDisplay: "Changed length of currency custom field custom field on Brokers from 17 to 15",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
     changedCFOptionOnOffCustom: {
         metadataType: MetadataType.CustomField,
         operationType: OperationType.MODIFIED,
@@ -158,7 +223,23 @@ export const parseResultsByCustomFieldActions: Record<string, ParseResult> = {
         fieldModified: 'LookupFilter',
         sampleDisplay: "Added Lookup Filter to lookup field on Broker",
         changeCategory: ChangeCategory.DATABASE_CONFIGURATION
-    }
+    },
+
+    changedCFDevNameCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.MODIFIED,
+        fieldModified: 'DeveloperName',
+        sampleDisplay: "Changed field name of lookup field custom field on Brokers from lookup_field to lookup_field2",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
+
+    createdCFMasterDetailCustom: {
+        metadataType: MetadataType.CustomField,
+        operationType: OperationType.CREATED,
+        fieldModified: null,
+        sampleDisplay: "Created master-detail field: Master detail relationship (Account) on Brokers",
+        changeCategory: ChangeCategory.DATABASE_CONFIGURATION
+    },
 }
 
 
